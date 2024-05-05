@@ -1,6 +1,7 @@
 import styles from "./Card.module.css"
 import toyota from "C:/Users/Daniel/Desktop/react_native_projects/React_Basic_Projects/Project_Practicing_prop_style_card/src/assets/toyota.png"
 import Button from "C:/Users/Daniel/Desktop/react_native_projects/React_Basic_Projects/Project_Practicing_prop_style_card/src/Button/Button.jsx"
+import PropTypes from "prop-types"
 
 function Card(props) {
     return(
@@ -15,6 +16,12 @@ function Card(props) {
     )
 }
 
+
+Card.proptypes = {
+    image: PropTypes.image,
+    name: PropTypes.string,
+    description: PropTypes.string
+}
 
 Card.defaultProps = {
     image: toyota,

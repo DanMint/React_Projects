@@ -11,7 +11,7 @@ function App() {
       <Card image={varoom2} name="Consept Car" description="Thing go vroom vroom.. better?"/>
       <Card image={varoom3} name="GR86" description="Thing go vroom vroom but save money"/>
       <Card image={varoom4} name="GR86" description="Thing go vroom vroom nad work good"/>
-      <Card />
+      <Card image="HAHAHAHAHA" name={2345} />
     </>
   )
 }
