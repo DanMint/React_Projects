@@ -1,0 +1,13 @@
+.counter {
+    text-align: center;
+    border: 1px solid hsl(0, 0%, 80%);
+    width: 300px;           
+    height: 200px;
+    margin: auto;
+}
+
+.counter .number{
+    font-size: 60px;
+    color: aqua;
+}
+
