@@ -42,7 +42,7 @@ function MyComponent() {
                 <p>Review: {review}</p>
 
                 <select value={payment} onChange={handlePaymentChnage}>
-                    <option value="">Select and option</option>
+                    <option value="">Select an option</option>
                     <option value="Visa">Visa</option>
                     <option value="Mastercard">Mastercard</option>
                     <option value="Gift Card">Gift Card</option>
