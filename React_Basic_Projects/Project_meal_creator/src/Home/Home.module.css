@@ -1,0 +1,36 @@
+.home {
+    display: flex;            
+    flex-direction: column;   
+    align-items: center;      
+    justify-content: center;  
+    margin: auto;             
+}
+
+.home .title {
+    text-shadow: 10cm;
+    color: blueviolet;
+}
+
+.home .paragraph{
+    border: 2px solid #000000;  
+    padding: 25px;               
+    background-color: #f0f0f0;  
+    width: 300px;               
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}
+
+.home .button {
+    padding: 10px 20px;           
+    font-size: 16px;              
+    text-align: center;           
+    color: white;                
+    background-color: #007BFF;    
+    border: none;                
+    border-radius: 5px;           
+    cursor: pointer;              
+    transition: background-color 0.3s; 
+}
+
+.home .button:hover {
+    background-color: #0056b3;    
+}
