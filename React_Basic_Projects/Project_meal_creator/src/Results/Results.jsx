@@ -1,29 +1,28 @@
+function Results({ breakfast, lunch, dinner }) {
+    const breakfastCalories = breakfast.map(item => item.calories);
+    const lunchCalories = lunch.map(item => item.calories);
+    const dinnerCalories = dinner.map(item => item.calories);
 
-function Results(breakfast, lunch, dinner) {
+    let totalCalories = 0;
+
+    for (let i = 0; i < breakfastCalories.length; i ++) {
+        totalCalories += breakfastCalories[i];
+    }
+
+    for (let i = 0; i < lunchCalories.length; i ++) {
+        totalCalories += lunchCalories[i];
+    }
+
+    for (let i = 0; i < dinnerCalories.length; i ++) {
+        totalCalories += dinnerCalories[i];
+    }
+
+
     return(
         <>
-            <div>
-                <h2>Breakfast:</h2>
-                <ul>
-                    {breakfast.map(food => (
-                        <li key={food.id}>{food.name} - Calories: {food.calories}, Protein: {food.protein}g</li>
-                    ))}
-                </ul>
-                <h2>Lunch:</h2>
-                <ul>
-                    {lunch.map(food => (
-                        <li key={food.id}>{food.name} - Calories: {food.calories}, Protein: {food.protein}g</li>
-                    ))}
-                </ul>
-                <h2>Dinner:</h2>
-                <ul>
-                    {dinner.map(food => (
-                        <li key={food.id}>{food.name} - Calories: {food.calories}, Protein: {food.protein}g</li>
-                    ))}
-                </ul>
-            </div>
+            <h1>Total calories: {totalCalories}</h1>
         </>
     );
 }
 
-export default Results
+export default Results;
