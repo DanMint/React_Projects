@@ -15,7 +15,6 @@ function ComponentA() {
                 <UserContext.Provider value={user}>
                     <ComponentB user={user}/>
                 </UserContext.Provider>
-                
             </div>
         </>
     );
