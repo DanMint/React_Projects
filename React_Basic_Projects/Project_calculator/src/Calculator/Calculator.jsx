@@ -3,14 +3,20 @@ import styles from './Calculator.module.css'
 import React, {useState} from 'react';
 
 function Calculator() {
+    /// running sum of the equation
     let [value, setValue] = useState(0);
+    /// what gets ouputted to the user to see
     let [output, setOutput] = useState("");
 
+    /// number of numbers inputted
     let [numbers, setNumbers] = useState(0)
+    /// current input
     let [currentInput, setCurrentInput] = useState("");
+    /// operator amount
     let [operatorAmount, setOperatorAmount] = useState(0);
+    /// current operator
     let [operator, setOperator] = useState(0);
-    let [equal, setEqual] = useState(false);
+    
 
     function putOne() {
        if (numbers == 0 && operatorAmount == 0) {
@@ -144,9 +150,65 @@ function Calculator() {
     }
 
     function addPlus() {
-            setOperators(operators.push('+'))
+        if (operator == '') 
+            setValue(value += Number(currentInput));
+            
 
+        if (operator == '+') 
+            setValue(value += Number(currentInput));
+
+        if (operator == '-') 
+            setValue(value -= Number(currentInput));
+            
+
+        if (operator == '*') 
+            setValue(value *= Number(currentInput));
+           
+
+        if (operator == '/') 
+            setValue(value /= Number(currentInput));
+            
+
+        setCurrentInput("");
+        setOutput(output + '+');
+        setOperator('+');
     }
+
+    function equal() {
+        if (currentInput == "") 
+            clear(true);
+        
+
+        if (operator == '+') 
+            setValue(value += Number(currentInput));
+
+        if (operator == '-') 
+            setValue(value -= Number(currentInput));
+            
+
+        if (operator == '*') 
+            setValue(value *= Number(currentInput));
+           
+
+        if (operator == '/') 
+            setValue(value /= Number(currentInput));
+
+        setOutput(output + "=" + value);
+            
+    }
+
+    function clear(error = false) {
+        if (error) {
+            setOutput("Error");
+            console.log("Equals has been pressed after an operator");
+        } 
+        
+    
+        setValue(0);
+        setOutput("");
+        setCurrentInput("");
+    }
+    
 
     return(
         <>
@@ -175,6 +237,10 @@ function Calculator() {
                     <button>-</button>
                     <button>*</button>
                     <button>/</button>
+                </div>
+                
+                <div className='styles.equals'>
+                    <button onClick={equal}>=</button>
                 </div>
             </div>
         </>
